@@ -10,6 +10,7 @@ const prev_btn = document.querySelector(".prev-btn");
 const next_btn = document.querySelector(".next-btn");
 const links = document.querySelectorAll(".nav-link");
 const toggle_btn = document.querySelector(".toggle-btn");
+const hamburger = document.querySelector(".hamburger");
 
 window.addEventListener("scroll", () => {
     activeLink();
@@ -97,7 +98,7 @@ modal_overlay.addEventListener("click", () =>{
 
 prev_btn.addEventListener("click", () => {
     if (currentIndex === 0) {
-        currentIndex = 4      
+        currentIndex = 3      
     }else {
         currentIndex--;
     }
@@ -105,7 +106,7 @@ prev_btn.addEventListener("click", () => {
 });
 
 next_btn.addEventListener("click", () => {
-    if (currentIndex === 4) {
+    if (currentIndex === 3) {
         currentIndex = 0     
     }else {
         currentIndex++;
@@ -156,4 +157,10 @@ function changeTheme(isDark) {
 
 toggle_btn.addEventListener("click", () => {
     changeTheme(!document.body.classList.contains("dark"));
+});
+
+// Open and Close NavBar Menu
+
+hamburger.addEventListener("click", () => {
+    document.body.classList.toggle("open");
 });

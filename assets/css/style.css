@@ -158,7 +158,7 @@ header .scrolled .logo{
 }
 .links{
     flex: 1;
-    display: flex;
+    display: flex;   
     justify-content: space-between;
 
 }
@@ -219,6 +219,41 @@ header .scrolled .logo{
 .toggle-btn:hover{
     filter: brightness(97%);
 }
+.hamburger{
+    display: none;
+    padding: 1rem 0;
+    height: 12px;
+    width: 25px;
+    box-sizing: content-box;
+    cursor: pointer;
+    position: relative;   
+}
+.hamburger .bar{
+    width: 100%;
+    height: 2px;
+    background-color: var(--heading-color);
+    border-radius: 3px;
+    position: absolute;
+}
+.hamburger .bar:first-child{
+    top: 1rem;
+    transition: top 0.2s .15s, transform 0.3s;
+}
+.hamburger .bar:last-child{
+    bottom: 1rem;
+    transition: bottom 0.2s .15s, transform 0.3s;
+}
+body.open .hamburger .bar:first-child {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: top 0.2s, transform 0.3s 0.1s;
+}
+body.open .hamburger .bar:last-child {
+    bottom: 50%;
+    transform: translateY(50%) rotate(45deg);
+    transition: bottom 0.2s, transform 0.3s 0.1s;
+}
+
 /* Showcase Area styling */
 .showcase-area{
     padding: 120px 0;
@@ -767,4 +802,106 @@ footer .social-media{
 }
 .social-link:hover{
     color: var(--main-color-1);
+}
+/* <!-------------------1000px screen ----------------------!> */
+@media (max-width: 1000px){
+    .sub-heading{
+        font-size: 0.75rem;
+    }
+    .heading{
+        font-size: 2rem;
+    }
+    .showcase-area .heading{
+        font-size: 2.7rem;
+    }
+    .text{
+        font-size: 0.84rem;
+        margin: 1.3rem 0;
+    }
+    .btn{
+        padding: 0.8rem 1.6rem;
+        font-size: 0.8rem;
+        border-radius: 15px;
+        min-width: 100px;
+    }
+    .btn.secondary-btn{
+        font-size: 0.85rem;
+    }
+    .form-input {
+        padding: 0.8rem 1.45rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+    }
+    .logo {
+        font-size: 1.45rem;
+    }
+    header .logo {
+        height: 100px;
+        line-height: 100px;
+    }
+    .nav-link{
+        font-size: 0.7rem;
+    }
+    .showcase-area{
+        padding: 100px 0;
+    }
+    .showcase-area .container{
+        grid-template-columns: 1fr 400px;
+        height: 450px;
+    }
+    .skills-box{
+        padding: 4rem;
+    }
+    .sk-progress{
+        transform: scale(0.85);
+    }
+    .services .container{
+        column-gap: 2.5rem;
+    }
+    .contact .container{
+        column-gap: 2.5rem;
+    }
+    .contact-form{
+        padding: 2.5rem 2rem;
+    }
+    .contact-form h3{
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    .contact .form-input{
+        margin-bottom: 0.8rem;
+    }
+    
+}
+/* <!-------------------768px screen ----------------------!> */
+@media (max-width: 768px){
+    :root {
+        --section-padding: 4.5rem;
+    }
+    .hamburger{
+        display: block;
+    }
+    .header{
+        background-color: var(--bg-color-2);
+    }
+    .links{
+        order: 3;
+        flex-basis: 100%; /*  width : 100% */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 0 2rem;
+    }
+    .links ul {
+        position: relative;
+        flex-direction: column;
+    }
+    .nav-link {
+        margin: 1.5rem 0;
+        color: var(--heading-color);
+        font-weight: 500;
+    }
+    .toggle-btn{
+        margin: 0;
+    }
 }
