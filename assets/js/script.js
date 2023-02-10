@@ -170,3 +170,15 @@ links.forEach(link => link.addEventListener("click", () => {
     document.body.classList.remove("open");
     document.body.classList.remove("stopScrolling");
 }))
+
+
+
+// Swipper
+const swiper = new Swiper('.swiper', {
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+});

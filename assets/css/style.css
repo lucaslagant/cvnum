@@ -493,54 +493,59 @@ body.open .hamburger .bar:last-child {
     font-size: 1rem;
 }
 /* Parcours section Styling */
+.services{
+    padding: var(--section-padding) 0 calc(var(--section-padding) + 120px);
+}
 .services .container{
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    column-gap: 6rem;
+    grid-template-columns: 1.2fr 1fr;
     align-items: center;
 }
-.services-grid{
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 4.4rem;
-}
-.srv-card{
+.swiper{
+    width: 100%;
     background-color: var(--bg-color-2);
     border-radius: 15px;
-    padding: 2.5rem 2.1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    padding: 2rem 0 2.5rem 2rem;
 }
-.srv-card h3{
-    color: var(--heading-color);
+.swiper-slide{
+    padding: 0 2.5rem;
+}
+.step-info h4{
     font-weight: 500;
+    color: var(--heading-color);
+    margin-bottom: 0.3rem;
     font-size: 1.05rem;
 }
-.srv-card .text{
-    margin: 0.7rem;
-    font-size: 0.7rem;
+.step-info h5{
+    color: var(--main-color-1);
+    font-weight: 500;
+    font-size: 0.8rem;
 }
-.srv-card:nth-child(2){
-    transform:translateY(2.2rem);
+.rwv .text{
+    display: block;
+    margin: 1.5rem 0;
 }
-.srv-card:nth-child(3){
-    transform:translateY(-2.2rem);
+.services-title{
+    padding-left: 5rem;
 }
-.services-grid::before{
-    content: "";
+.services-title > *{
+    color: #fff;
+}
+.section-background{
     position: absolute;
-    width: 210px;
-    height: 210px;
-    top: 50%;
+    width: 100vw;
+    max-width: 75rem;
+    height: calc(100% + 120px);
+    top: 15px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    border: 15px solid var(--main-color-1);
+    transform: translateX(calc(-50% + 120px));
+    background-image: linear-gradient(
+        55deg,
+        var(--main-color-2) 20%,
+        var(--main-color-1) 20%
+    );
+    border-bottom-left-radius: 60px;
     z-index: -1;
-    opacity: 0.07;
 }
 /* Portfolio section Styling  */
 .portfolio .container{
