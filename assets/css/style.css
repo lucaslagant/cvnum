@@ -561,6 +561,19 @@ body.open .hamburger .bar:last-child {
 .portfolio-title{
     padding-bottom: 1rem;
 }
+.filter-btn{
+    display: inline-block;
+    color: var(--heading-color);
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+    margin-left: 1.3rem;
+    font-family: inherit;
+    text-transform: uppercase;
+}
 .portfolio-gallery{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

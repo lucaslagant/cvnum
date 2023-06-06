@@ -80,6 +80,7 @@ function skillsCounter(){
     );
 }
 // Portfolio Animation
+let mixer = mixitup(".portfolio-gallery");
 let currentIndex = 0;
 
 zoom_icons.forEach((icn, i) =>
