@@ -99,7 +99,7 @@ modal_overlay.addEventListener("click", () =>{
 
 prev_btn.addEventListener("click", () => {
     if (currentIndex === 0) {
-        currentIndex = 8      
+        currentIndex = 9      
     }else {
         currentIndex--;
     }
@@ -107,7 +107,7 @@ prev_btn.addEventListener("click", () => {
 });
 
 next_btn.addEventListener("click", () => {
-    if (currentIndex === 8) {
+    if (currentIndex === 9) {
         currentIndex = 0     
     }else {
         currentIndex++;
