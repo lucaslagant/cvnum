@@ -353,8 +353,8 @@ body.open .hamburger .bar:last-child {
 }
 .about-grid{
     display: grid;
-    grid-template-columns: 190px 190px;
-    grid-template-rows: 190px 190px;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 250px 250px;
     justify-content: center;
     column-gap: 2.5rem;
     row-gap: 100px;
@@ -403,6 +403,7 @@ body.open .hamburger .bar:last-child {
     color: var(--heading-color);
     font-weight: 600;
     font-size: 1rem;
+    margin-left: 1rem;
     margin-top: 1rem;
     letter-spacing: 0.3px;
 }
